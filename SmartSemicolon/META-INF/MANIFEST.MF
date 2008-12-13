@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Smart Semicolon Plug-in
+Bundle-SymbolicName: SmartSemicolon;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: smartsemicolon.Activator
+Bundle-Vendor: Sandip V. Chitale
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.editors,
+ org.eclipse.jface.text
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

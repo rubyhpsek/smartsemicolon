@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.ui.category.textEditor"
+            defaultHandler="smartsemicolon.AddSemicolonCommand"
+            id="SmartSemicolon.addSemicolonCommand"
+            name="Add semicolon">
+      </command>
+      <command
+            categoryId="org.eclipse.ui.category.textEditor"
+            defaultHandler="smartsemicolon.AddSemicolonNewlineIndentCommand"
+            id="SmartSemicolon.addSemicolonNewlineIndentCommand"
+            name="Add semicolon newline and indent">
+      </command>      
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="SmartSemicolon.addSemicolonCommand"
+            contextId="org.eclipse.jdt.ui.javaEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+;">
+      </key>
+      <key
+            commandId="SmartSemicolon.addSemicolonNewlineIndentCommand"
+            contextId="org.eclipse.jdt.ui.javaEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+;">
+      </key>
+   </extension>
+
+</plugin>
