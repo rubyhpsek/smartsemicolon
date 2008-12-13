@@ -2,20 +2,20 @@
 <feature
       id="SmartSemicolonFeature"
       label="Smart Semicolon Feature"
-      version="1.0.0"
+      version="1.0.1"
       provider-name="Sandip V. Chitale">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="http://code.google.com/p/smartsemicolon/">
+      Smart Semicolon
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
-   </copyright>
-
-   <license url="http://www.example.com/license">
-      [Enter License Description here.]
+   <license url="http://www.opensource.org/licenses/bsd-license.php">
+      Smart Semicolon
    </license>
+
+   <url>
+      <update label="Smart Semicolon Update Site" url="http://smartsemicolon.googlecode.com/svn/trunk/SmartSemicolonUpdateSite/site.xml"/>
+   </url>
 
    <plugin
          id="SmartSemicolon"
