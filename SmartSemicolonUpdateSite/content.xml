@@ -3,13 +3,13 @@
 <repository name='file:/home/schitale/professional/eclipse/workspace3.4.1/SmartSemicolonUpdateSite/ - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
   <properties size='2'>
     <property name='p2.compressed' value='false'/>
-    <property name='p2.timestamp' value='1229197265858'/>
+    <property name='p2.timestamp' value='1229323935641'/>
   </properties>
   <references size='2'>
     <repository url='http://smartsemicolon.googlecode.com/svn/trunk/SmartSemicolonUpdateSite/site.xml' type='1' options='0'/>
     <repository url='http://smartsemicolon.googlecode.com/svn/trunk/SmartSemicolonUpdateSite/site.xml' type='0' options='0'/>
   </references>
-  <units size='11'>
+  <units size='14'>
     <unit id='SmartSemicolonFeature.feature.group' version='1.0.0' singleton='false'>
       <update id='SmartSemicolonFeature.feature.group' range='[0.0.0,1.0.0)' severity='0'/>
       <properties size='5'>
@@ -425,10 +425,99 @@
       <touchpointData size='1'>
         <instructions size='1'>
           <instruction key='manifest'>
-            Bundle-ManifestVersion: 2&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui.editors,org.eclipse.jface.text&#xA;Manifest-Version: 1.0&#xA;Bundle-Activator: smartsemicolon.Activator&#xA;Bundle-Version: 1.0.1&#xA;Bundle-SymbolicName: SmartSemicolon;singleton:=true&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-Name: Smart Semicolon Plug-in&#xA;Bundle-Vendor: Sandip V. Chitale&#xA;
+            Bundle-ManifestVersion: 2&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui.editors,org.eclipse.jface.text&#xA;Manifest-Version: 1.0&#xA;Bundle-Activator: smartsemicolon.Activator&#xA;Bundle-Version: 1.0.1&#xA;Bundle-SymbolicName: SmartSemicolon;singleton:=true&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-Name: Smart Semicolon Plug-in&#xA;Bundle-Vendor: Sandip V. Chitale
           </instruction>
         </instructions>
       </touchpointData>
+    </unit>
+    <unit id='SmartSemicolon' version='1.0.2'>
+      <update id='SmartSemicolon' range='[0.0.0,1.0.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Smart Semicolon Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Sandip V. Chitale'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='SmartSemicolon' version='1.0.2'/>
+        <provided namespace='osgi.bundle' name='SmartSemicolon' version='1.0.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='SmartSemicolon' version='1.0.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui.editors,org.eclipse.jface.text&#xA;Manifest-Version: 1.0&#xA;Bundle-Activator: smartsemicolon.Activator&#xA;Bundle-Version: 1.0.2&#xA;Bundle-SymbolicName: SmartSemicolon;singleton:=true&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-Name: Smart Semicolon Plug-in&#xA;Bundle-Vendor: Sandip V. Chitale&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='SmartSemicolonFeature.feature.jar' version='1.0.2'>
+      <update id='SmartSemicolonFeature.feature.jar' range='[0.0.0,1.0.2)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Smart Semicolon Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='Smart Semicolon'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://code.google.com/p/smartsemicolon/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Sandip V. Chitale'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='SmartSemicolonFeature.feature.jar' version='1.0.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='SmartSemicolonFeature' version='1.0.2'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='SmartSemicolonFeature' version='1.0.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license url='http://www.opensource.org/licenses/bsd-license.php'>
+          Smart Semicolon
+        </license>
+      </licenses>
+    </unit>
+    <unit id='SmartSemicolonFeature.feature.group' version='1.0.2' singleton='false'>
+      <update id='SmartSemicolonFeature.feature.group' range='[0.0.0,1.0.2)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Smart Semicolon Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='Smart Semicolon'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://code.google.com/p/smartsemicolon/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Sandip V. Chitale'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='SmartSemicolonFeature.feature.group' version='1.0.2'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='SmartSemicolon' range='[1.0.2,1.0.2]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='SmartSemicolonFeature.feature.jar' range='[1.0.2,1.0.2]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license url='http://www.opensource.org/licenses/bsd-license.php'>
+          Smart Semicolon
+        </license>
+      </licenses>
     </unit>
   </units>
 </repository>

@@ -14,11 +14,9 @@ import org.eclipse.ui.texteditor.AbstractDecoratedTextEditor;
 public abstract class AbstractAddSemicolonCommand implements IHandler {
 
 	public void addHandlerListener(IHandlerListener handlerListener) {
-
 	}
 
 	public void dispose() {
-
 	}
 
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -66,9 +64,15 @@ public abstract class AbstractAddSemicolonCommand implements IHandler {
 	}
 
 	public void removeHandlerListener(IHandlerListener handlerListener) {
-
 	}
-	
+
 	protected abstract void doAddSemicolon(StyledText styledText);
+
+	protected boolean lineQualifies(String line) {
+		return !line.matches(".*" + getDelimiter() + "[^" + getDelimiter()
+				+ ")]*" + "$");
+	}
+
+	protected abstract String getDelimiter();
 
 }
