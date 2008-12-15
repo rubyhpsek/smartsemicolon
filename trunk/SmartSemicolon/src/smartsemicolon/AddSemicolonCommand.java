@@ -2,7 +2,7 @@ package smartsemicolon;
 
 import org.eclipse.swt.custom.StyledText;
 
-public class AddSemicolonCommand extends AbstractAddSemicolonCommand {
+public class AddSemicolonCommand extends SemicolonCommand {
 
 	@Override
 	protected void doAddSemicolon(StyledText styledText) {
@@ -10,12 +10,12 @@ public class AddSemicolonCommand extends AbstractAddSemicolonCommand {
 		int lineAtOffset = styledText.getLineAtOffset(caretOffset);
 		int offsetAtLine = styledText.getOffsetAtLine(lineAtOffset);
 		String line = styledText.getLine(lineAtOffset);
-		if (!line.matches(".*" + ";" + "[^;)]*" + "$")) {
+		if (lineQualifies(line)) {
 			styledText.setCaretOffset(offsetAtLine + line.length());
-			String appendage = ";";
+			String appendage = getDelimiter();
 			styledText.insert(appendage);
 			styledText.setCaretOffset(caretOffset);
-		}		
+		}
 	}
 
 }

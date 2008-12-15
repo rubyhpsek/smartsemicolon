@@ -14,7 +14,19 @@
             defaultHandler="smartsemicolon.AddSemicolonNewlineIndentCommand"
             id="SmartSemicolon.addSemicolonNewlineIndentCommand"
             name="Add semicolon newline and indent">
-      </command>      
+      </command>
+      <command
+            categoryId="org.eclipse.ui.category.textEditor"
+            defaultHandler="smartsemicolon.AddCommaCommand"
+            id="SmartSemicolon.addCommaCommand"
+            name="Add comma">
+      </command>
+      <command
+            categoryId="org.eclipse.ui.category.textEditor"
+            defaultHandler="smartsemicolon.AddCommaNewlineIndentCommand"
+            id="SmartSemicolon.addCommaNewlineIndentCommand"
+            name="Add comma newline and indent">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.bindings">
@@ -29,6 +41,18 @@
             contextId="org.eclipse.jdt.ui.javaEditorScope"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+M2+;">
+      </key>
+      <key
+            commandId="SmartSemicolon.addCommaCommand"
+            contextId="org.eclipse.jdt.ui.javaEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+,">
+      </key>
+      <key
+            commandId="SmartSemicolon.addCommaNewlineIndentCommand"
+            contextId="org.eclipse.jdt.ui.javaEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+,">
       </key>
    </extension>
 
